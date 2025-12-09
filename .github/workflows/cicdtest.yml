@@ -25,7 +25,7 @@ on:
 env:   # set this to your application's name
   TEST: hello
 
-job:
+jobs:
   build:
     runs-on: ubuntu-latest
   steps:
