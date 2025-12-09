@@ -16,21 +16,21 @@
 # For more information on GitHub Actions for Azure: https://github.com/Azure/Actions
 # For more information on the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # For more samples to get started with GitHub Action workflows to deploy to Azure: https://github.com/Azure/actions-workflow-samples
-
+name: CICD Test
 on:
   push:
     branches: [ "main" ]
   workflow_dispatch:
 
-env:   # set this to your application's name
+env:
   TEST: hello
 
 jobs:
   build:
     runs-on: ubuntu-latest
-  steps:
-    - name: 'Checkout GitHub Action'
-      uses: actions/checkout@v3
+    steps:
+      - name: 'Checkout GitHub Action'
+        uses: actions/checkout@v3
 
-    - name: 'echo hello'
-      run: echo $TEST
+      - name: 'echo hello'
+        run: echo $TEST
